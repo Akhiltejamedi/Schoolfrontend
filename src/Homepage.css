@@ -1,0 +1,33 @@
+.homepage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #45a049; /* Darker Green */
+}
+
+.logout-button {
+    background-color: #f44336; /* Red */
+}
+
+.logout-button:hover {
+    background-color: #d32f2f; /* Darker Red */
+}

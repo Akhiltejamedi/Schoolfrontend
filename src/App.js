@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import React, { useMemo, useState } from 'react';
 import './App.css';
+import PrivateRoutes from './PrivateRoutes';
+import PublicRoutes from './PublicRoutes';
+const App = () => {
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    const [isLoggedIn, setisLoggedIn] = useState(false)
+
+
+
+
+    const isToken = useMemo(() => {
+        // Perform the calculation based on the value of isLoggedIn
+        return  localStorage?.getItem('token')
+    }, [isLoggedIn]);
+
+    console.log('hello nicks',isLoggedIn,isToken )
+
+    
+    return (
+        <div> {}{(isToken || isLoggedIn) ? <PrivateRoutes setisLoggedIn={setisLoggedIn}/> : <PublicRoutes setisLoggedIn={setisLoggedIn}/>}</div>
+        
+    );
+};
 
 export default App;
+

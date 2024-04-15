@@ -1,0 +1,79 @@
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://i0.wp.com/avenuemail.in/wp-content/uploads/2021/09/3-1.jpg?fit=1600%2C1067&ssl=1');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blur-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    z-index: -1;
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    width: 300px;
+    margin: 0 auto;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"]
+ {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+h3 a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+h3 a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
